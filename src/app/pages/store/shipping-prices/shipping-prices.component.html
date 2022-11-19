@@ -1,1 +1,9 @@
-<p>shipping-prices works!</p>
+<div class="p-10">
+  <h1 class="text-gray-400 text-3xl mb-10">Shipping Prices</h1>
+  <ng-container *ngFor="let price of prices | async">
+    <div class="bg-slate-300 text-gray-400 flex justify-around w-full min-w-fit flex flex-row justify-between px-10 py-5 mb-5 rounded-lg">
+      <span>{{ price.type }}</span>
+      <span>{{ price.price | currency }}</span>
+    </div>
+  </ng-container>
+</div>

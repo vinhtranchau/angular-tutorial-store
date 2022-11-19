@@ -1,1 +1,27 @@
-<p>cart works!</p>
+<div class="p-10">
+  <h1 class="text-gray-400 text-3xl">Cart</h1>
+  <p class="my-5">
+    <a [routerLink]="['/' + storeRoute.shippingPrices]" class="text-blue-400">Shipping Prices</a>
+  </p>
+  <ng-container *ngFor="let cart of carts;">
+    <div class="bg-slate-300 text-gray-400 flex justify-around w-full min-w-fit flex flex-row justify-between px-10 py-5 mb-5 rounded-lg">
+      <span>{{ cart.name }}</span>
+      <span>{{ cart.price | currency }}</span>
+    </div>
+  </ng-container>
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div class="mb-5">
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" class="bg-slate-300 p-2 rounded" formControlName="name">
+    </div>
+    <div>
+      <label for="address">
+        Address
+      </label>
+      <input id="address" type="text" class="bg-slate-300 p-2 rounded" formControlName="address">
+    </div>
+    <button class="p-2 bg-blue-700 text-white rounded my-5" type="submit">Purchase</button>
+  </form>
+</div>
