@@ -1,0 +1,6 @@
+<div class="mb-5">
+  <a [title]="product.name + ' details'" [routerLink]="[storeRoute.detail, product.id]" class="text-blue-700 font-bold">{{ product.name }}</a>
+  <h2>Description: {{ product.description }}</h2>
+  <button class="bg-blue-700 text-white rounded p-2" (click)="share()">Share</button>
+  <my-product-alert [product]="product" (notify)="onNotify($event)"></my-product-alert>
+</div>
