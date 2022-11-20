@@ -3,3 +3,7 @@ export const storeRoute = {
   detail: 'product-detail',
   shippingPrices: 'shpping-prices'
 }
+
+export const heroRoute = {
+  hero: 'hero',
+}

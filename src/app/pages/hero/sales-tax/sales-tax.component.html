@@ -1,0 +1,9 @@
+<div class="m-10">
+  <p class="text-3xl mb-5">Sales Tax Calculator</p>
+  <p class="italic mb-5">Enter a number and press enter to calculate tax.</p>
+  <label for="amount">
+    Amount:
+  </label>
+  <input id="amount" type="text" class="border p-2 rounded mb-5" [(ngModel)]="amount">
+  <p class="mb-5">The sales tax is {{ calculate() | currency }}</p>
+</div>

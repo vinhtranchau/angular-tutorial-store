@@ -1,0 +1,12 @@
+<div class="text-gray-500 mt-10">
+  <p class="text-3xl mb-5">{{ hero.name }} Detail</p>
+  <p class="mb-5">Id: {{ hero.id }}</p>
+  <label for="name">
+    Name:
+  </label>
+  <input id="name" type="text" class="border p-2 rounded" [(ngModel)]="hero.name">
+  <label for="power">
+    Power:
+  </label>
+  <input id="power" type="text" class="border p-2 rounded" [(ngModel)]="hero.power">
+</div>
